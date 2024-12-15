@@ -43,7 +43,7 @@ def make_scad(**kwargs):
     if True:
 
         part_default = {} 
-        part_default["project_name"] = "test" ####### neeeds setting
+        part_default["project_name"] = "oomlout_oobb_hinge" ####### neeeds setting
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
@@ -55,7 +55,7 @@ def make_scad(**kwargs):
             p3 = copy.deepcopy(kwargs)
             p3["width"] = width
             p3["height"] = 1
-            #p3["thickness"] = 6
+            p3["thickness"] = 3
             part["kwargs"] = p3
             part["name"] = "hinge"
             parts.append(part)
@@ -142,6 +142,7 @@ def get_hinge(thing, **kwargs):
         p3["type"] = "p"
         p3["shape"] = f"oobb_cylinder"
         wid = (width * 15)-1
+        width_mm = wid
         p3["depth"] = wid
         p3["radius"] = diameter_hinge/2            
         #p3["m"] = "#"
@@ -217,7 +218,7 @@ def get_hinge(thing, **kwargs):
 
     #add scissor tooth cutout
     if True:
-        clearance = 1
+        clearance = 0.25
         shift_y = 15
         shift_z = diameter_hinge/2
         shift_z_hinge = shift_z
@@ -228,8 +229,8 @@ def get_hinge(thing, **kwargs):
         width_rounded_up = math.ceil(width)
         wid = (width_rounded_up * 15)-1
         p3["depth"] = 7.5 + clearance
-        p3["radius"] = (diameter_hinge + clearance*2)/2            
-        p3["m"] = "#"
+        p3["radius"] = (diameter_hinge + 2)/2            
+        #p3["m"] = "#"
         poss = []
         pos1 = copy.deepcopy(pos)
         pos1[0] += -wid/2 
@@ -254,6 +255,41 @@ def get_hinge(thing, **kwargs):
         p3["rot"] = rot1
         p3["zz"] = "bottom"
         oobb_base.append_full(thing,**p3)    
+
+    #add nut at the end
+    if True:    
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_nut"
+        p3["radius_name"] = "m6"
+        p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += width_mm/2
+        pos1[1] += -15
+        pos1[2] += diameter_hinge/2
+        p3["pos"] = pos1
+        rot1 = copy.deepcopy(rot)
+        rot1[1] = 90
+        p3["rot"] = rot1
+        p3["zz"] = "top"
+        oobb_base.append_full(thing,**p3)
+
+        #add cylinder on the other side
+        p4 = copy.deepcopy(p3)
+        p4["shape"] = f"oobb_cylinder"
+        p4.pop("radius_name","")
+        p4["radius"] = 12/2
+        dep = 5.5
+        p4["depth"] = dep
+        p4["zz"] = "bottom"
+        pos2 = copy.deepcopy(pos1)
+        pos2[0] += shift_side
+        pos2[0] += -dep
+        p4["pos"] = pos2
+        oobb_base.append_full(thing,**p4)
+
+
+
 
     if prepare_print:
         #put into a rotation object

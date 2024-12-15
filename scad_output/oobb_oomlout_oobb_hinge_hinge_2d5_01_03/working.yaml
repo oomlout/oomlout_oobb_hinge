@@ -6,14 +6,14 @@ full_shift:
 - 0
 - 0
 - 0
-id: oobb_test_hinge_2d5_01_03
+id: oobb_oomlout_oobb_hinge_hinge_2d5_01_03
 kwargs:
   height: 1
   modes:
   - 3dpr
   overwrite: true
   thickness: 3
-  type: test_hinge
+  type: oomlout_oobb_hinge_hinge
   width: 2.5
 name: hinge
 project_name: C:\gh\oomlout_oobb_hinge
@@ -919,11 +919,10 @@ thing:
         - 7
         type: positive
         width: 2.5
-  - - depth: 8.5
-      h: 8.5
+  - - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: laser
-      m: '#'
       pos: &id037
       - -22.0
       - -15
@@ -937,22 +936,20 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 3dpr
-      m: '#'
       pos: *id037
       r: 8.0
       rot: *id038
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 'true'
-      m: '#'
       pos: *id037
       r: 8.0
       radius: 8.0
@@ -960,11 +957,10 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-  - - depth: 8.5
-      h: 8.5
+  - - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: laser
-      m: '#'
       pos: &id039
       - -7.0
       - -15
@@ -978,22 +974,20 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 3dpr
-      m: '#'
       pos: *id039
       r: 8.0
       rot: *id040
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 'true'
-      m: '#'
       pos: *id039
       r: 8.0
       radius: 8.0
@@ -1001,11 +995,10 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-  - - depth: 8.5
-      h: 8.5
+  - - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: laser
-      m: '#'
       pos: &id041
       - 8.0
       - -15
@@ -1019,22 +1012,20 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 3dpr
-      m: '#'
       pos: *id041
       r: 8.0
       rot: *id042
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 'true'
-      m: '#'
       pos: *id041
       r: 8.0
       radius: 8.0
@@ -1042,11 +1033,10 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-  - - depth: 8.5
-      h: 8.5
+  - - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: laser
-      m: '#'
       pos: &id043
       - 78.0
       - -15
@@ -1060,22 +1050,20 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 3dpr
-      m: '#'
       pos: *id043
       r: 8.0
       rot: *id044
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 'true'
-      m: '#'
       pos: *id043
       r: 8.0
       radius: 8.0
@@ -1083,11 +1071,10 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-  - - depth: 8.5
-      h: 8.5
+  - - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: laser
-      m: '#'
       pos: &id045
       - 93.0
       - -15
@@ -1101,22 +1088,20 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 3dpr
-      m: '#'
       pos: *id045
       r: 8.0
       rot: *id046
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 'true'
-      m: '#'
       pos: *id045
       r: 8.0
       radius: 8.0
@@ -1124,11 +1109,10 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-  - - depth: 8.5
-      h: 8.5
+  - - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: laser
-      m: '#'
       pos: &id047
       - 108.0
       - -15
@@ -1142,26 +1126,112 @@ thing:
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 3dpr
-      m: '#'
       pos: *id047
       r: 8.0
       rot: *id048
       shape: cylinder
       type: negative
       width: 2.5
-    - depth: 8.5
-      h: 8.5
+    - depth: 7.75
+      h: 7.75
       height: 1
       inclusion: 'true'
-      m: '#'
       pos: *id047
       r: 8.0
       radius: 8.0
       rot: *id048
+      shape: cylinder
+      type: negative
+      width: 2.5
+  - - objects:
+      - height: 5
+        inclusion: laser
+        m: '#'
+        pos:
+        - 0
+        - 0
+        - -5
+        r: 5.77
+        shape: polyg
+        sides: 6
+        type: positive
+        width: 2.5
+      - height: 5
+        inclusion: 3dpr
+        m: '#'
+        pos:
+        - 0
+        - 0
+        - -5
+        r: 5.914249999999999
+        shape: polyg
+        sides: 6
+        type: positive
+        width: 2.5
+      - height: 5
+        inclusion: 'true'
+        m: '#'
+        pos:
+        - 0
+        - 0
+        - -5
+        r: 5.77
+        shape: polyg
+        sides: 6
+        type: positive
+        width: 2.5
+      pos:
+      - 18.25
+      - -15
+      - 7.0
+      rot:
+      - 0
+      - 90
+      - 0
+      type: rotation
+      typetype: n
+  - - depth: 5.5
+      h: 5.5
+      height: 1
+      inclusion: laser
+      m: '#'
+      pos: &id049
+      - 112.75
+      - -15
+      - 7.0
+      r: 6.0
+      radius: 6.0
+      rot: &id050
+      - 0
+      - 90
+      - 0
+      shape: cylinder
+      type: negative
+      width: 2.5
+    - depth: 5.5
+      h: 5.5
+      height: 1
+      inclusion: 3dpr
+      m: '#'
+      pos: *id049
+      r: 6.0
+      rot: *id050
+      shape: cylinder
+      type: negative
+      width: 2.5
+    - depth: 5.5
+      h: 5.5
+      height: 1
+      inclusion: 'true'
+      m: '#'
+      pos: *id049
+      r: 6.0
+      radius: 6.0
+      rot: *id050
       shape: cylinder
       type: negative
       width: 2.5
@@ -1175,7 +1245,7 @@ thing:
     - 0
     - 0
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_plate
     thickness: 3
     type: p
@@ -1189,7 +1259,7 @@ thing:
     - 100
     - 0
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_plate
     thickness: 3
     type: p
@@ -1205,7 +1275,7 @@ thing:
     - 0
     - 0
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_holes
     thickness: 3
     type: p
@@ -1221,7 +1291,7 @@ thing:
     - 100
     - 0
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_holes
     thickness: 3
     type: p
@@ -1240,7 +1310,7 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: p
@@ -1260,7 +1330,7 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: p
@@ -1281,7 +1351,7 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_hole
     thickness: 3
     type: n
@@ -1302,7 +1372,7 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_hole
     thickness: 3
     type: n
@@ -1316,7 +1386,7 @@ thing:
     - 0
     - -7.5
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cube
     size:
     - 36.5
@@ -1333,7 +1403,7 @@ thing:
     - 100
     - -7.5
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cube
     size:
     - 36.5
@@ -1350,7 +1420,7 @@ thing:
     - 0
     - -11.5
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cube
     size:
     - 36.5
@@ -1367,7 +1437,7 @@ thing:
     - 100
     - -11.5
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cube
     size:
     - 36.5
@@ -1376,9 +1446,8 @@ thing:
     thickness: 3
     type: p
     width: 2.5
-  - depth: 8.5
+  - depth: 7.75
     height: 1
-    m: '#'
     modes:
     - 3dpr
     overwrite: true
@@ -1391,15 +1460,14 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: n
     width: 2.5
     zz: bottom
-  - depth: 8.5
+  - depth: 7.75
     height: 1
-    m: '#'
     modes:
     - 3dpr
     overwrite: true
@@ -1412,15 +1480,14 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: n
     width: 2.5
     zz: bottom
-  - depth: 8.5
+  - depth: 7.75
     height: 1
-    m: '#'
     modes:
     - 3dpr
     overwrite: true
@@ -1433,15 +1500,14 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: n
     width: 2.5
     zz: bottom
-  - depth: 8.5
+  - depth: 7.75
     height: 1
-    m: '#'
     modes:
     - 3dpr
     overwrite: true
@@ -1454,15 +1520,14 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: n
     width: 2.5
     zz: bottom
-  - depth: 8.5
+  - depth: 7.75
     height: 1
-    m: '#'
     modes:
     - 3dpr
     overwrite: true
@@ -1475,15 +1540,14 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: n
     width: 2.5
     zz: bottom
-  - depth: 8.5
+  - depth: 7.75
     height: 1
-    m: '#'
     modes:
     - 3dpr
     overwrite: true
@@ -1496,38 +1560,81 @@ thing:
     - 0
     - 90
     - 0
-    save_type: none
+    save_type: all
+    shape: oobb_cylinder
+    thickness: 3
+    type: n
+    width: 2.5
+    zz: bottom
+  - height: 1
+    m: '#'
+    modes:
+    - 3dpr
+    overwrite: true
+    pos:
+    - 18.25
+    - -15
+    - 7.0
+    radius_name: m6
+    rot:
+    - 0
+    - 90
+    - 0
+    save_type: all
+    shape: oobb_nut
+    thickness: 3
+    type: n
+    width: 2.5
+    zz: top
+  - depth: 5.5
+    height: 1
+    m: '#'
+    modes:
+    - 3dpr
+    overwrite: true
+    pos:
+    - 112.75
+    - -15
+    - 7.0
+    radius: 6.0
+    rot:
+    - 0
+    - 90
+    - 0
+    save_type: all
     shape: oobb_cylinder
     thickness: 3
     type: n
     width: 2.5
     zz: bottom
   components_string:
-  - oobb_plate_shape_p_type_3_depth_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness
-  - oobb_plate_shape_p_type_3_depth_100_0_0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness
-  - oobb_holes_shape_p_type_3_depth_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_true_both_holes_perimeter_holes
-  - oobb_holes_shape_p_type_3_depth_100_0_0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_true_both_holes_perimeter_holes
-  - oobb_cylinder_shape_p_type_36.5_depth_-18.25_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_7.0_radius_0_90_0_rot_bottom_zz
-  - oobb_cylinder_shape_p_type_36.5_depth_81.75_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_7.0_radius_0_90_0_rot_bottom_zz
-  - oobb_hole_shape_n_type_m6_radius_name_36.5_depth_-18.25_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_0_90_0_rot_bottom_zz
-  - oobb_hole_shape_n_type_m6_radius_name_36.5_depth_81.75_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_0_90_0_rot_bottom_zz
-  - oobb_cube_shape_p_type_0_-7.5_0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_15_3_size
-  - oobb_cube_shape_p_type_100_-7.5_0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_15_3_size
-  - oobb_cube_shape_p_type_0_-11.5_0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_7_7_size
-  - oobb_cube_shape_p_type_100_-11.5_0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_7_7_size
-  - oobb_cylinder_shape_n_type_8.5_depth_-22.0_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
-  - oobb_cylinder_shape_n_type_8.5_depth_-7.0_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
-  - oobb_cylinder_shape_n_type_8.5_depth_8.0_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
-  - oobb_cylinder_shape_n_type_8.5_depth_78.0_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
-  - oobb_cylinder_shape_n_type_8.5_depth_93.0_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
-  - oobb_cylinder_shape_n_type_8.5_depth_108.0_-15_7.0_pos_none_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
-  description: test hinge 2.5x1x3
-  folder: C:\gh\oomlout_oobb_version_4_generated_parts\things\oobb_test_hinge_2d5_01_03
+  - oobb_plate_shape_p_type_3_depth_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness
+  - oobb_plate_shape_p_type_3_depth_100_0_0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness
+  - oobb_holes_shape_p_type_3_depth_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_true_both_holes_perimeter_holes
+  - oobb_holes_shape_p_type_3_depth_100_0_0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_true_both_holes_perimeter_holes
+  - oobb_cylinder_shape_p_type_36.5_depth_-18.25_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_7.0_radius_0_90_0_rot_bottom_zz
+  - oobb_cylinder_shape_p_type_36.5_depth_81.75_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_7.0_radius_0_90_0_rot_bottom_zz
+  - oobb_hole_shape_n_type_m6_radius_name_36.5_depth_-18.25_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_0_90_0_rot_bottom_zz
+  - oobb_hole_shape_n_type_m6_radius_name_36.5_depth_81.75_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_0_90_0_rot_bottom_zz
+  - oobb_cube_shape_p_type_0_-7.5_0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_15_3_size
+  - oobb_cube_shape_p_type_100_-7.5_0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_15_3_size
+  - oobb_cube_shape_p_type_0_-11.5_0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_7_7_size
+  - oobb_cube_shape_p_type_100_-11.5_0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_36.5_7_7_size
+  - oobb_cylinder_shape_n_type_7.75_depth_-22.0_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
+  - oobb_cylinder_shape_n_type_7.75_depth_-7.0_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
+  - oobb_cylinder_shape_n_type_7.75_depth_8.0_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
+  - oobb_cylinder_shape_n_type_7.75_depth_78.0_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
+  - oobb_cylinder_shape_n_type_7.75_depth_93.0_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
+  - oobb_cylinder_shape_n_type_7.75_depth_108.0_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_8.0_radius_0_90_0_rot_bottom_zz
+  - oobb_nut_shape_n_type_m6_radius_name_18.25_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_0_90_0_rot_top_zz
+  - oobb_cylinder_shape_n_type_5.5_depth_112.75_-15_7.0_pos_all_save_type_true_overwrite_'3dpr'_modes_2.5_width_1_height_3_thickness_0_90_0_rot_bottom_zz_6.0_radius
+  description: oomlout oobb hinge hinge 2.5x1x3
+  folder: C:\gh\oomlout_oobb_version_4_generated_parts\things\oobb_oomlout_oobb_hinge_hinge_2d5_01_03
   height: 1
   height_mm: 14
-  id: oobb_test_hinge_2d5_01_03
+  id: oobb_oomlout_oobb_hinge_hinge_2d5_01_03
   thickness: 3
   thickness_mm: 3
-  type: test_hinge
+  type: oomlout_oobb_hinge_hinge
   width: 2.5
   width_mm: 36.5
