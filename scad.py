@@ -17,7 +17,7 @@ def make_scad(**kwargs):
         #filter = "test"
 
         kwargs["save_type"] = "none"
-        #kwargs["save_type"] = "all"
+        kwargs["save_type"] = "all"
         
         navigation = False
         #navigation = True    
@@ -47,14 +47,18 @@ def make_scad(**kwargs):
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
-        part = copy.deepcopy(part_default)
-        p3 = copy.deepcopy(kwargs)
-        p3["width"] = 3
-        p3["height"] = 3
-        #p3["thickness"] = 6
-        part["kwargs"] = p3
-        part["name"] = "base"
-        parts.append(part)
+
+        widths = [3,2.5]
+
+        for width in widths:
+            part = copy.deepcopy(part_default)
+            p3 = copy.deepcopy(kwargs)
+            p3["width"] = width
+            p3["height"] = 1
+            #p3["thickness"] = 6
+            part["kwargs"] = p3
+            part["name"] = "hinge"
+            parts.append(part)
 
         
     #make the parts
@@ -82,7 +86,7 @@ def make_scad(**kwargs):
         generate_navigation(sort = sort)
 
 
-def get_base(thing, **kwargs):
+def get_hinge(thing, **kwargs):
 
     prepare_print = kwargs.get("prepare_print", False)
     width = kwargs.get("width", 1)
@@ -93,6 +97,9 @@ def get_base(thing, **kwargs):
     #pos = copy.deepcopy(pos)
     #pos[2] += -20
 
+    diameter_hinge = 14
+    shift_side = 100
+
     #add plate
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
@@ -101,7 +108,12 @@ def get_base(thing, **kwargs):
     #p3["holes"] = True         uncomment to include default holes
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
+    pos2 = copy.deepcopy(pos)
+    pos2[0] += shift_side
+    poss = []
+    poss.append(pos1)
+    poss.append(pos2)
+    p3["pos"] = poss
     oobb_base.append_full(thing,**p3)
     
     #add holes seperate
@@ -113,8 +125,135 @@ def get_base(thing, **kwargs):
     p3["holes"] = "perimeter"
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
+    pos2 = copy.deepcopy(pos)
+    pos2[0] += shift_side
+    poss = []
+    poss.append(pos1)
+    poss.append(pos2)
+    p3["pos"] = poss
     oobb_base.append_full(thing,**p3)
+
+    #add hinge cylinder and hole
+    if True:
+        shift_y = 15
+        shift_z = diameter_hinge/2
+        shift_z_hinge = shift_z
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"oobb_cylinder"
+        wid = (width * 15)-1
+        p3["depth"] = wid
+        p3["radius"] = diameter_hinge/2            
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += -wid/2
+        pos1[1] += -shift_y
+        pos1[2] += shift_z
+        pos2 = copy.deepcopy(pos1)
+        pos2[0] += shift_side
+        poss = []
+        poss.append(pos1)
+        poss.append(pos2)
+        p3["pos"] = poss
+        rot1 = copy.deepcopy(rot)
+        rot1[1] = 90
+        p3["rot"] = rot1
+        p3["zz"] = "bottom"
+        oobb_base.append_full(thing,**p3)
+
+        p4 = copy.deepcopy(p3)
+        p4["type"] = "n"
+        p4["shape"] = f"oobb_hole"
+        p4["radius_name"] = "m6"
+        p4.pop("radius","") 
+        p4["m"] = "#"
+        oobb_base.append_full(thing,**p4)
+
+
+    #add joining cubes
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"oobb_cube"
+        w = wid
+        h = 15
+        d = depth
+        size = [w,h,d]
+        p3["size"] = size
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 0
+        pos1[1] += -h/2
+        pos1[2] += 0
+        pos2 = copy.deepcopy(pos1)
+        pos2[0] += shift_side
+        poss = []
+        poss.append(pos1)
+        poss.append(pos2)
+        p3["pos"] = poss
+        oobb_base.append_full(thing,**p3)
+
+        #add extra joining cube
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "p"
+        p3["shape"] = f"oobb_cube"
+        w = wid
+        h = 7
+        d = 7
+        size = [w,h,d]
+        p3["size"] = size
+        #p3["m"] = "#"
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += 0
+        pos1[1] += -11.5
+        pos1[2] += 0
+        pos2 = copy.deepcopy(pos1)
+        pos2[0] += shift_side
+        poss = []
+        poss.append(pos1)
+        poss.append(pos2)
+        p3["pos"] = poss
+        oobb_base.append_full(thing,**p3)
+
+    #add scissor tooth cutout
+    if True:
+        clearance = 1
+        shift_y = 15
+        shift_z = diameter_hinge/2
+        shift_z_hinge = shift_z
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "n"
+        p3["shape"] = f"oobb_cylinder"
+        import math
+        width_rounded_up = math.ceil(width)
+        wid = (width_rounded_up * 15)-1
+        p3["depth"] = 7.5 + clearance
+        p3["radius"] = (diameter_hinge + clearance*2)/2            
+        p3["m"] = "#"
+        poss = []
+        pos1 = copy.deepcopy(pos)
+        pos1[0] += -wid/2 
+        pos1[1] += -shift_y
+        pos1[2] += shift_z    
+        #round width up
+        for i in range(width_rounded_up):
+            pos12 = copy.deepcopy(pos1)
+            pos12[0] += i*15
+            poss.append(pos12)
+        
+        #for position in poss add 7.5 and shift_side
+        poss2 = []
+        for pos1 in poss:
+            pos2 = copy.deepcopy(pos1)
+            pos2[0] += shift_side            
+            poss2.append(pos2)
+        poss.extend(poss2)
+        p3["pos"] = poss
+        rot1 = copy.deepcopy(rot)
+        rot1[1] = 90
+        p3["rot"] = rot1
+        p3["zz"] = "bottom"
+        oobb_base.append_full(thing,**p3)    
 
     if prepare_print:
         #put into a rotation object
